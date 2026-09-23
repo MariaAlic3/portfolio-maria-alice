@@ -1,0 +1,255 @@
+/* ESTILO GERAL */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    .poppins-light {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+      }
+      
+      .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      
+      .poppins-medium {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+      
+      .poppins-semibold {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+      }
+      
+      .poppins-light-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: italic;
+      }
+      
+      .poppins-regular-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: italic;
+      }
+      
+      .poppins-medium-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: italic;
+      }
+      
+      .poppins-semibold-italic {
+        font-family: "Poppins", sans-serif;
+        font-weight: 600;
+        font-style: italic;
+      }
+      
+ } 
+      
+body{
+    background-color: rgb(38, 3, 42);
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+
+button:hover{
+    box-shadow: 0px 0px 8px rgba(137, 43, 226, 0.755);
+    transform: scale(1.05);
+}
+
+/* ESTILO DO CABEÇALHO */
+header{
+   padding: 40px 4%; 
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #e6e6e6;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color:#fff;
+    transform: scale(1.08)
+}
+
+header nav ul{
+    list-style-type: none;
+}
+
+header nav ul li{
+    display: inline-block;
+    padding: 0 50px;
+}
+
+.btn-contato button{
+    padding: 10px 50%;
+    font-size: 19px;
+    font-weight: 600;
+    background-color: blueviolet;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+
+/*ESTILO DO TOPO DO SITE*/
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 200px;
+}
+
+.topo-do-site h1{
+    color: #fff;
+    font-size: 43px;
+    line-height: 40px;
+}
+
+.topo-do-site .txt-topo-site h1 span{
+    color: rgb(145, 60, 224);
+    font-size: 43px;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #fff;
+    margin: 40px 0;
+    font-size: 20px;
+}
+
+.btn-contato-2 button{
+    padding: 10px 18%;
+    font-size: 17px;
+    font-weight: 400;
+    background-color: blueviolet;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 26px;
+    }
+}
+
+/* ESTILO DO SOBRE MIM*/
+section.sobre{
+    padding: 100px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #fff;
+}
+
+.sobre .txt-sobre h2{
+    font-size: 35px;
+    line-height: 35px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span{
+    color: rgb(141, 65, 212);
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    text-align: justify;
+    font-size: 21px;
+}
+
+.sobre .txt-sobre .btn-social button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(134, 59, 204);
+    font-size: 20px;
+    cursor: pointer;
+    margin: 6px 4px;
+    transition: .2s;
+}
+
+
+
+/*ATENÇÃO DEIXAR O HTML SEMANTICO*/
+@media screen and (max-width: 1020px){
+
+    .flex{
+        flex-direction: column;
+    }
+
+    .menu desktop .btn-contato{
+        display: none;
+    }
+
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1{
+        font-size: 37px;
+    }
+
+    .topo-do-site .txt-topo-site p{
+        margin: 40px 8px;
+        font-size: 20px;
+        text-align: justify;
+    }
+
+    .sobre .txt-sobre p{
+        text-align: justify;
+        font-size: 21px;
+    }
+
+    .btn-contato-2 button{
+        padding: 10px 10%;
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    
+
+}
