@@ -2,6 +2,7 @@
 name: migracao-react
 description: Convenções para migrar este portfólio de HTML/CSS puro para React com TypeScript usando Vite. Use ao criar componentes, converter uma seção ou página do HTML antigo, configurar o projeto Vite ou quando eu pedir para "passar o portfólio pro React", mesmo sem citar a skill. Não use para criar funcionalidades novas nem para outros projetos.
 allowed-tools: Read, Glob, Grep, Edit, Write, Bash(npm create vite@latest *), Bash(npm install), Bash(npm run dev), Bash(npm run build), Bash(git status), Bash(git diff *)
+disable-model-invocation: true
 ---
 
 ## Contexto
