@@ -1,0 +1,68 @@
+.projetos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+  gap: var(--space-5);
+}
+
+.card-projeto {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  border: var(--border-thin) solid var(--color-line);
+  border-radius: var(--radius-md);
+  background-color: var(--color-surface);
+  line-height: var(--leading-normal);
+}
+
+.card-projeto h3 {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+}
+
+.card-projeto h4 {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-brand);
+}
+
+.card-projeto-equipe {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.card-projeto-problema {
+  color: var(--color-text-muted);
+}
+
+.card-projeto .etiquetas {
+  margin-top: var(--space-2);
+}
+
+/* Links ficam no rodapé do card, alinhados entre cards da mesma linha. */
+.card-projeto-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  margin-top: auto;
+  padding-top: var(--space-4);
+}
+
+.card-projeto-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-brand);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.card-projeto-links a:hover {
+  color: var(--color-text);
+}
