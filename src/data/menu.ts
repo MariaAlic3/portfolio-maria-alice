@@ -1,11 +1,12 @@
 export interface ItemMenu {
   texto: string;
-  link: string;
+  id: string;
 }
 
 export const itensMenu: ItemMenu[] = [
-  { texto: 'Início', link: '#' },
-  { texto: 'Especialidades', link: '#' },
-  { texto: 'Sobre', link: '#' },
-  { texto: 'Projetos', link: '#' },
+  { texto: 'Início', id: 'inicio' },
+  { texto: 'Sobre', id: 'sobre' },
+  { texto: 'Especialidades', id: 'especialidades' },
+  { texto: 'Projetos', id: 'projetos' },
+  { texto: 'Contato', id: 'contato' },
 ];

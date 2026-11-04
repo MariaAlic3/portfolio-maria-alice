@@ -208,7 +208,7 @@ Momentos de animação (somente estes):
 
 1. **Abertura do hero:** sequência única com nome, descrição e botões; por último, a rede 3D se forma.
 2. **Entrada de seção:** só o título e o primeiro bloco de cada seção aparecem ao rolar, uma vez. Cards não animam um por um.
-3. **Menu:** o indicador roxo desliza até o link da seção visível. Ao clicar, a rolagem é suave.
+3. **Menu:** o sublinhado roxo cresce sob o link da seção visível e encolhe no link anterior. Ao clicar, a rolagem é suave.
 4. **Linha do tempo (Sobre):** o trilho se desenha de cima para baixo e os marcos aparecem em sequência.
 5. **Bloco violeta (Contato):** a cor de fundo varre a tela ao entrar na seção.
 6. **Rede 3D (hero):** gira devagar e reage de leve ao mouse. Three.js em TypeScript, carregado com `React.lazy`.

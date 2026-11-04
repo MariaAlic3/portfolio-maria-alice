@@ -2,7 +2,7 @@ import personagem from '../assets/personagem-topo.jpg';
 
 export default function TopoDoSite() {
   return (
-    <section className="topo-do-site">
+    <section id="inicio" className="topo-do-site">
       {/* PRIMEIRA SECTION */}
       <div className="interface">
         <div className="flex">
@@ -16,7 +16,7 @@ export default function TopoDoSite() {
             </p>
 
             <div className="btn-contato-2">
-              <a href="#">
+              <a href="#contato">
                 <button>Entre em Contato</button>
               </a>
             </div>

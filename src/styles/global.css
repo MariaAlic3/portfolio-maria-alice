@@ -53,6 +53,18 @@
       
  } 
       
+/* Rolagem suave até as seções; o menu fixo não cobre o título da seção. */
+html{
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height);
+}
+
+@media (prefers-reduced-motion: reduce){
+    html{
+        scroll-behavior: auto;
+    }
+}
+
 body{
     background-color: var(--color-bg);
     color: var(--color-text);
@@ -75,48 +87,7 @@ button:hover{
     transform: scale(1.05);
 }
 
-/* ESTILO DO CABEÇALHO */
-header{
-   padding: 40px 4%; 
-}
-
-header > .interface{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-header a{
-    color: #e6e6e6;
-    text-decoration: none;
-    display: inline-block;
-    transition: .2s;
-}
-
-header a:hover{
-    color:#fff;
-    transform: scale(1.08)
-}
-
-header nav ul{
-    list-style-type: none;
-}
-
-header nav ul li{
-    display: inline-block;
-    padding: 0 50px;
-}
-
-.btn-contato button{
-    padding: 10px 50%;
-    font-size: 19px;
-    font-weight: 600;
-    background-color: blueviolet;
-    border: 0;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: .2s;
-}
+/* ESTILO DO CABEÇALHO: ver src/components/Header.css */
 
 
 /*ESTILO DO TOPO DO SITE*/
@@ -221,10 +192,6 @@ section.sobre .flex{
 
     .flex{
         flex-direction: column;
-    }
-
-    .menu desktop .btn-contato{
-        display: none;
     }
 
     section.topo-do-site{

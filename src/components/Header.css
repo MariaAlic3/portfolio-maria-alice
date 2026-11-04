@@ -1,0 +1,177 @@
+/* Menu fixo no topo. Usa só variáveis de src/styles/tokens.css. */
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  height: var(--header-height);
+  padding: 0 var(--gutter);
+  background-color: var(--color-bg);
+  border-bottom: var(--border-thin) solid var(--color-line);
+  box-shadow: var(--shadow-sm);
+}
+
+.cabecalho-interface {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.cabecalho-logo {
+  display: flex;
+  border-radius: var(--radius-sm);
+}
+
+.cabecalho-logo img {
+  height: calc(var(--header-height) - var(--space-4));
+  width: auto;
+}
+
+/* Links */
+.menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  list-style: none;
+}
+
+.menu-link {
+  position: relative;
+  display: inline-block;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color var(--duration-fast) var(--ease-out);
+}
+
+.menu-link:hover,
+.menu-link[aria-current='true'] {
+  color: var(--color-text);
+}
+
+/* Sublinhado roxo da seção visível: cresce a partir do centro. */
+.menu-link::after {
+  content: '';
+  position: absolute;
+  left: var(--space-3);
+  right: var(--space-3);
+  bottom: var(--space-1);
+  height: var(--border-thick);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-brand);
+  transform: scaleX(0);
+  transition: transform var(--duration-base) var(--ease-out);
+}
+
+.menu-link[aria-current='true']::after {
+  transform: scaleX(1);
+}
+
+/* Contato vira botão */
+.menu-link-contato {
+  margin-left: var(--space-2);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radius-pill);
+  background-color: var(--color-brand-strong);
+  color: var(--color-on-brand);
+  font-weight: var(--weight-semibold);
+  transition:
+    background-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.menu-link-contato:hover,
+.menu-link-contato[aria-current='true'] {
+  color: var(--color-on-brand);
+  background-color: var(--color-brand-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.menu-link-contato::after {
+  display: none;
+}
+
+/* Foco do teclado */
+.cabecalho a:focus-visible,
+.menu-botao:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+/* Botão do menu: só no celular */
+.menu-botao {
+  display: none;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  border: var(--border-thin) solid var(--color-line);
+  border-radius: var(--radius-pill);
+  background-color: transparent;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+}
+
+/* Anula o hover genérico de button do global.css (aumento e brilho). */
+.menu-botao:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--color-brand);
+}
+
+.menu-botao i {
+  font-size: var(--text-xl);
+  line-height: 1;
+}
+
+@media (max-width: 48rem) {
+  .menu-botao {
+    display: inline-flex;
+  }
+
+  .menu {
+    position: absolute;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    z-index: var(--z-menu);
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-1);
+    padding: var(--space-4) var(--gutter) var(--space-6);
+    background-color: var(--color-surface);
+    border-bottom: var(--border-thin) solid var(--color-line);
+    box-shadow: var(--shadow-md);
+  }
+
+  .menu-aberto {
+    display: flex;
+  }
+
+  .menu-link {
+    display: block;
+    padding: var(--space-3) var(--space-4);
+    font-size: var(--text-md);
+  }
+
+  .menu-link::after {
+    left: var(--space-4);
+    right: auto;
+    width: var(--space-6);
+    transform-origin: left;
+  }
+
+  .menu-link-contato {
+    margin: var(--space-3) 0 0;
+    text-align: center;
+  }
+}

@@ -3,7 +3,7 @@ import { redesSociais } from '../data/redes';
 
 export default function Sobre() {
   return (
-    <section className="sobre">
+    <section id="sobre" className="sobre">
       <div className="interface">
         <div className="flex">
           <div className="img-sobre">
