@@ -54,8 +54,10 @@
  } 
       
 body{
-    background-color: rgb(38, 3, 42);
-    height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    min-height: 100vh;
 }
 
 .interface{
