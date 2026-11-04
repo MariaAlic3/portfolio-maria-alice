@@ -1,0 +1,65 @@
+/* Bloco violeta: fechamento do site. */
+.contato {
+  background-color: var(--color-block);
+  color: var(--color-on-brand);
+}
+
+.contato-intro {
+  max-width: var(--measure);
+  margin-bottom: var(--space-7);
+  font-size: var(--text-lg);
+  line-height: var(--leading-normal);
+}
+
+.contato-canais {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  list-style: none;
+  margin-bottom: var(--space-7);
+}
+
+.contato-canais a {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  column-gap: var(--space-3);
+  align-items: baseline;
+  border-radius: var(--radius-sm);
+  color: var(--color-on-brand);
+  text-decoration: none;
+}
+
+.contato-canais i {
+  grid-row: span 2;
+  font-size: var(--text-xl);
+  color: var(--color-block-accent);
+}
+
+.contato-nome {
+  font-size: var(--text-sm);
+  color: var(--color-block-accent);
+}
+
+.contato-texto {
+  grid-column: 2;
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-semibold);
+  text-decoration: underline;
+  text-decoration-color: var(--color-block-accent);
+  text-underline-offset: 0.2em;
+  overflow-wrap: anywhere;
+}
+
+.contato-canais a:hover .contato-texto {
+  text-decoration-thickness: var(--border-thick);
+}
+
+.contato .secao-interface a:focus-visible {
+  box-shadow: var(--focus-ring-on-block);
+}
+
+.contato-local {
+  font-size: var(--text-sm);
+  color: var(--color-block-accent);
+}

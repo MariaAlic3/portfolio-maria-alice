@@ -3,6 +3,7 @@ import TopoDoSite from './components/TopoDoSite';
 import Especialidades from './components/Especialidades';
 import Sobre from './components/Sobre';
 import Projetos from './components/Projetos';
+import Contato from './components/Contato';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Especialidades />
         <Sobre />
         <Projetos />
+        <Contato />
       </main>
     </>
   );
