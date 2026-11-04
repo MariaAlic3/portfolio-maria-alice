@@ -1,0 +1,35 @@
+.especialidades-grupos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 18rem), 1fr));
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.especialidades-grupo h4 {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  color: var(--color-brand);
+}
+
+.especialidades-soft {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+  gap: var(--space-6);
+}
+
+.especialidades-soft div {
+  padding-left: var(--space-4);
+  border-left: var(--border-thick) solid var(--color-line);
+}
+
+.especialidades-soft dt {
+  margin-bottom: var(--space-2);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+}
+
+.especialidades-soft dd {
+  line-height: var(--leading-normal);
+  color: var(--color-text-muted);
+}
