@@ -59,3 +59,46 @@
   outline: none;
   box-shadow: var(--focus-ring);
 }
+
+/* Botões (links com cara de botão) */
+.botao {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--space-7);
+  padding: var(--space-3) var(--space-6);
+  border: var(--border-thin) solid transparent;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+  transition:
+    background-color var(--duration-fast) var(--ease-out),
+    border-color var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.botao:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.botao-primaria {
+  background-color: var(--color-brand-strong);
+  color: var(--color-on-brand);
+}
+
+.botao-primaria:hover {
+  background-color: var(--color-brand-hover);
+  box-shadow: var(--shadow-glow);
+}
+
+.botao-secundaria {
+  border-color: var(--color-line);
+  color: var(--color-text);
+}
+
+.botao-secundaria:hover {
+  border-color: var(--color-brand);
+}
