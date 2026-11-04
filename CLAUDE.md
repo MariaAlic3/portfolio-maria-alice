@@ -44,7 +44,7 @@ Público: recrutadores e tech leads avaliando candidatas a estágio em front-end
 - `migracao-react`: usada na fase 1, com disparo automático desativado. Só roda se chamada pelo nome.
 
 ## Diretrizes do redesign
-- Stack atual: React + TypeScript com CSS puro, sem Tailwind.
+- Stack atual: React + TypeScript, com Tailwind CSS e shadcn/ui permitidos.
 - Animações de rolagem e de navegação devem respeitar `prefers-reduced-motion`.
 - Three.js em TypeScript, restrito a um elemento do hero e carregado com `React.lazy`.
 - Projetos apresentam problema, stack, o que eu fiz e links (repositório e deploy).
