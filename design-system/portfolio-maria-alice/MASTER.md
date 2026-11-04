@@ -166,6 +166,15 @@ Cada raio indica um tipo de elemento, em vez de um raio único para tudo.
 | `--radius-lg` | 24px | Fotos | Moldura mais orgânica para as fotos reais |
 | `--radius-pill` | 999px | Botões, indicador do menu | Mantém os botões arredondados da v0 (`border-radius: 30px`) |
 
+## Bordas
+
+| Token | Valor | Uso |
+|---|---|---|
+| `--border-thin` | 1px | Contorno de cards, etiquetas, divisória do menu |
+| `--border-thick` | 2px | Sublinhado do menu, marcador das soft skills, trilho da linha do tempo |
+
+---
+
 ## Sombras e brilho
 
 Em fundo escuro, sombra preta quase não aparece. A profundidade vem do tom da superfície (`--color-surface`) e do brilho roxo.
@@ -176,6 +185,7 @@ Em fundo escuro, sombra preta quase não aparece. A profundidade vem do tom da s
 | `--shadow-md` | `0 12px 32px -12px rgba(0, 0, 0, 0.6)` | Menu aberto no celular |
 | `--shadow-glow` | `0 0 0 4px var(--color-brand-glow)` | Hover de botões. Herdeiro do brilho roxo da v0 |
 | `--focus-ring` | `0 0 0 3px var(--color-bg), 0 0 0 5px var(--color-brand)` | Foco do teclado: anel roxo com um vão escuro, visível em qualquer fundo |
+| `--focus-ring-on-block` | `0 0 0 3px var(--color-block), 0 0 0 5px var(--color-on-brand)` | Foco do teclado dentro do bloco violeta, onde o anel roxo não apareceria |
 
 ---
 
