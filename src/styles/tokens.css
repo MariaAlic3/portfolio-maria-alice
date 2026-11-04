@@ -1,0 +1,114 @@
+/*
+ * Tokens do design system: identidade visual ATUAL do portfólio.
+ * Documentação e motivo de cada valor: design-system/portfolio-maria-alice/MASTER.md
+ * Qualquer mudança aqui deve ser registrada no histórico de versões do MASTER.md.
+ */
+
+:root {
+  /* CORES: base escura */
+  --color-bg: #170a1f;
+  --color-bg-alt: #1d0e27;
+  --color-surface: #231230;
+  --color-line: #3a2650;
+  --color-text: #f2ecf7;
+  --color-text-muted: #b9a9c6;
+
+  /* CORES: marca (roxo) */
+  --color-brand: #a66bff;
+  --color-brand-strong: #7c2fe0;
+  --color-brand-hover: #8f45f0;
+  --color-on-brand: #ffffff;
+  --color-brand-glow: rgba(166, 107, 255, 0.35);
+
+  /* CORES: bloco violeta (seção Contato) */
+  --color-block: #5b12c9;
+  --color-block-accent: #d9c6ff;
+
+  /* TIPOGRAFIA: famílias */
+  --font-display: "Bricolage Grotesque", system-ui, sans-serif;
+  --font-body: "Instrument Sans", system-ui, sans-serif;
+
+  /* TIPOGRAFIA: escala */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-md: 1.125rem;
+  --text-lg: 1.3125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: clamp(1.75rem, 1.2rem + 2.2vw, 2.25rem);
+  --text-3xl: clamp(2.25rem, 1.4rem + 3.4vw, 3.75rem);
+  --text-display: clamp(2.75rem, 1.5rem + 5vw, 4.5rem);
+
+  /* TIPOGRAFIA: pesos */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-heavy: 800;
+
+  /* TIPOGRAFIA: entrelinha, espaçamento entre letras e largura de linha */
+  --leading-tight: 1.05;
+  --leading-snug: 1.25;
+  --leading-normal: 1.6;
+  --tracking-tight: -0.02em;
+  --tracking-normal: 0;
+  --measure: 68ch;
+
+  /* ESPAÇAMENTO (base de 4px) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+
+  /* LAYOUT */
+  --container-max: 1200px;
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --section-space: clamp(4rem, 8vw, 8rem);
+  --header-height: 4.5rem;
+
+  /* RAIOS */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* SOMBRAS E BRILHO */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 12px 32px -12px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 0 0 4px var(--color-brand-glow);
+  --focus-ring: 0 0 0 3px var(--color-bg), 0 0 0 5px var(--color-brand);
+
+  /* ANIMAÇÕES */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 600ms;
+  --duration-draw: 1200ms;
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --reveal-distance: 24px;
+  --stagger: 80ms;
+
+  /* CAMADAS */
+  --z-base: 0;
+  --z-canvas: 0;
+  --z-header: 100;
+  --z-menu: 200;
+}
+
+/* Movimento reduzido: tudo aparece no lugar final, sem transição. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-fast: 0ms;
+    --duration-base: 0ms;
+    --duration-slow: 0ms;
+    --duration-draw: 0ms;
+    --reveal-distance: 0px;
+    --stagger: 0ms;
+  }
+}
