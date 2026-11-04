@@ -39,7 +39,7 @@ Público: recrutadores e tech leads avaliando candidatas a estágio em front-end
 - `npm run lint`: verificação com ESLint
 
 ## Skills
-- `frontend-design`: define a identidade visual (hero, tipografia, paleta).
+- `frontend-design`: define a identidade visual (hero, tipografia, paleta). Instalada a partir de https://github.com/anthropics/skills.
 - `ui-ux-pro-max`: revisa cada seção pronta com as diretrizes de UX e o checklist de acessibilidade e responsividade. Não deve trocar a paleta nem as fontes definidas pela `frontend-design`.
 - `migracao-react`: usada na fase 1, com disparo automático desativado. Só roda se chamada pelo nome.
 
