@@ -1,5 +1,5 @@
 import Header from './components/Header';
-import TopoDoSite from './components/TopoDoSite';
+import Inicio from './components/Inicio';
 import Sobre from './components/Sobre';
 import Especialidades from './components/Especialidades';
 import Projetos from './components/Projetos';
@@ -11,7 +11,7 @@ function App() {
       <Header />
 
       <main>
-        <TopoDoSite />
+        <Inicio />
         <Sobre />
         <Especialidades />
         <Projetos />

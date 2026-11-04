@@ -90,59 +90,6 @@ button:hover{
 /* ESTILO DO CABEÇALHO: ver src/components/Header.css */
 
 
-/*ESTILO DO TOPO DO SITE*/
-section.topo-do-site{
-    padding: 40px 4%;
-}
-
-section.topo-do-site .flex{
-    align-items: center;
-    justify-content: center;
-    gap: 200px;
-}
-
-.topo-do-site h1{
-    color: #fff;
-    font-size: 43px;
-    line-height: 40px;
-}
-
-.topo-do-site .txt-topo-site h1 span{
-    color: rgb(145, 60, 224);
-    font-size: 43px;
-}
-
-.topo-do-site .txt-topo-site p{
-    color: #fff;
-    margin: 40px 0;
-    font-size: 20px;
-}
-
-.btn-contato-2 button{
-    padding: 10px 18%;
-    font-size: 17px;
-    font-weight: 400;
-    background-color: blueviolet;
-    border: 0;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: .2s;
-}
-
-.topo-do-site .img-topo-site img{
-    position: relative;
-    animation: flutuar 2s ease-in-out infinite alternate;
-}
-
-@keyframes flutuar{
-    0%{
-        top: 0;
-    }
-    100%{
-        top: 26px;
-    }
-}
-
 /* ESTILO DO SOBRE MIM*/
 section.sobre{
     padding: 100px 4%;
@@ -194,30 +141,11 @@ section.sobre .flex{
         flex-direction: column;
     }
 
-    section.topo-do-site{
-        padding: 20px 8%;
-    }
-
-    .topo-do-site h1{
-        font-size: 37px;
-    }
-
-    .topo-do-site .txt-topo-site p{
-        margin: 40px 8px;
-        font-size: 20px;
-        text-align: justify;
-    }
-
     .sobre .txt-sobre p{
         text-align: justify;
         font-size: 21px;
     }
 
-    .btn-contato-2 button{
-        padding: 10px 10%;
-        font-size: 15px;
-        font-weight: 400;
-    }
 
     
 

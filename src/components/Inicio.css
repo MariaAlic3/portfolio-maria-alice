@@ -1,0 +1,134 @@
+/* Seção Início (hero). Usa só variáveis de src/styles/tokens.css. */
+.inicio {
+  display: flex;
+  align-items: center;
+  min-height: calc(100svh - var(--header-height));
+  padding: var(--space-8) var(--gutter);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+.inicio-interface {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+}
+
+.inicio-nome {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: var(--weight-heavy);
+  line-height: var(--leading-tight);
+  letter-spacing: var(--tracking-tight);
+}
+
+.inicio-cargo {
+  margin-top: var(--space-4);
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-medium);
+  line-height: var(--leading-snug);
+  color: var(--color-brand);
+}
+
+.inicio-resumo {
+  max-width: var(--measure);
+  margin-top: var(--space-5);
+  font-size: var(--text-md);
+  line-height: var(--leading-normal);
+  color: var(--color-text-muted);
+}
+
+.inicio-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-7);
+}
+
+/* Foto: moldura orgânica, com espaço atrás para a rede 3D (Fase 6). */
+.inicio-visual {
+  position: relative;
+  width: 100%;
+  max-width: 24rem;
+  justify-self: center;
+}
+
+.inicio-foto {
+  position: relative;
+  z-index: var(--z-base);
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+.inicio-foto-reservada {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  border: var(--border-thick) dashed var(--color-line);
+  background-color: var(--color-surface);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.inicio-foto-reservada i {
+  font-size: var(--text-3xl);
+}
+
+/* Abertura: nome, cargo, resumo, botões e, por último, a foto. Acontece uma vez, ao carregar. */
+.inicio-entrada {
+  animation: inicio-surgir var(--duration-slow) var(--ease-out) both;
+}
+
+.inicio-cargo.inicio-entrada {
+  animation-delay: var(--stagger);
+}
+
+.inicio-resumo.inicio-entrada {
+  animation-delay: calc(var(--stagger) * 2);
+}
+
+.inicio-acoes.inicio-entrada {
+  animation-delay: calc(var(--stagger) * 3);
+}
+
+.inicio-visual.inicio-entrada {
+  animation-delay: calc(var(--stagger) * 5);
+}
+
+@keyframes inicio-surgir {
+  from {
+    opacity: 0;
+    transform: translateY(var(--reveal-distance));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Movimento reduzido: as durações já viram 0 em tokens.css; aqui desligamos também a animação em si. */
+@media (prefers-reduced-motion: reduce) {
+  .inicio-entrada {
+    animation: none;
+  }
+}
+
+@media (min-width: 64rem) {
+  .inicio-interface {
+    grid-template-columns: 1.3fr 1fr;
+    gap: var(--space-9);
+  }
+
+  .inicio-visual {
+    justify-self: end;
+  }
+}
